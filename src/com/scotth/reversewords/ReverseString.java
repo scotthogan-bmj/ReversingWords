@@ -19,6 +19,7 @@ public class ReverseString {
         String[] separateWords = input.split(" ");
         StringBuilder returnString = new StringBuilder();
         int arrayLength = separateWords.length;
+        boolean first = true;
         for (int i = 0; i < arrayLength; i++) {
             String word = separateWords[i];
             StringBuilder newSB = new StringBuilder();
@@ -26,11 +27,15 @@ public class ReverseString {
                 newSB.append(word.charAt(j));
             }
             String newWord = newSB.toString();
+            if (!first) {
+                returnString.append(" ");
+            } else {
+                first=false;
+            }
             returnString.append(newWord);
-            returnString.append(" ");
         }
         a = returnString.toString();
-        return a.trim();
+        return a;
     }
 
 }

@@ -2,6 +2,9 @@ package com.scotth.reversewords;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class ReverseStringTest {
@@ -13,3 +16,4 @@ public class ReverseStringTest {
         assertEquals("A simple string matches", correctAnswer,reversedString.reverseString());
     }
 }
+
